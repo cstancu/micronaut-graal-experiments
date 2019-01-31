@@ -1,4 +1,3 @@
-bash gradlew assemble
 native-image --no-server \
              --allow-incomplete-classpath -cp build/libs/fresh-graal-0.1-all.jar \
              -H:ReflectionConfigurationFiles=reflect.json \
