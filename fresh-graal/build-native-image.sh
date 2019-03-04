@@ -1,4 +1,8 @@
+#!/bin/bash 
+set -x #echo on
+
 native-image --no-server \
+            -Dio.netty.noUnsafe=true -Dfile.encoding=UTF-8 \
              --allow-incomplete-classpath -cp build/libs/fresh-graal-0.1-all.jar \
              -H:ReflectionConfigurationFiles=reflect.json \
              -H:EnableURLProtocols=http \
